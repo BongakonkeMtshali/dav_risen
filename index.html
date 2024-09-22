@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dav Risen - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Inline CSS for background image */
+        .banner {
+            background-image: url('images/background.jpg'); /* Replace with actual image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.4); /* Light overlay for better text visibility */
+            z-index: 1;
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            z-index: 2;
+        }
+
+        .cta-button {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            z-index: 2;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4500;
+        }
+
+        /* Login Button Styles */
+        .login-button {
+            background-color: blue; /* Blue color for the button */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: darkblue; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <header class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="exclusive-music.html">Exclusive Music</a>
+            <a href="membership.html">Membership</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="login.html" class="login-button">Log In</a> <!-- New Login Button -->
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="banner">
+        <h1>Welcome to Dav Risen</h1>
+        <a href="exclusive-music.html" class="cta-button">Listen Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+        <div class="contact-info">
+            <p>&copy; 2024 Dav Risen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

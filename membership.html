@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dav Risen - Membership</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <header class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="exclusive-music.html">Exclusive Music</a>
+            <a href="membership.html">Membership</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Membership Section -->
+    <section id="membership" class="membership">
+        <div class="login">
+            <h2>Login</h2>
+            <form action="login.php" method="post">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit">Login</button>
+                <a href="#forgot-password">Forgot Password?</a>
+            </form>
+        </div>
+
+        <div class="signup">
+            <h2>Sign Up</h2>
+            <form action="signup.php" method="post">
+                <label for="signup-name">Name:</label>
+                <input type="text" id="signup-name" name="name" required>
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" required>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="membership-tiers">
+            <h2>Membership Tiers</h2>
+            <div class="tier">
+                <h3>Basic</h3>
+                <p>Access to exclusive music releases and updates.</p>
+                <p>Price: $5/month</p>
+            </div>
+            <div class="tier">
+                <h3>Premium</h3>
+                <p>Everything in Basic, plus access to live events and behind-the-scenes content.</p>
+                <p>Price: $15/month</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+        <div class="contact-info">
+            <p>&copy; 2024 Dav Risen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

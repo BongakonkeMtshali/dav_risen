@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="navbar"> ... </header>
+
+    <section id="login">
+        <h1>Log In</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+    </section>
+
+    <footer> ... </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            localStorage.setItem('loggedInUser', username);
+            alert('You are logged in as ' + username);
+            window.location.href = 'index.html'; // Redirect to home
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dav Risen - Exclusive Music</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Menu */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Music Type Buttons */
+        .music-type-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .music-type-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .music-type-button:hover {
+            background-color: #218838;
+        }
+
+        /* Exclusive Music Section */
+        .music-page {
+            padding: 50px 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .song-list {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .song-item {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+            background-color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .song-item:hover {
+            background-color: #eaeaea;
+        }
+
+        /* Grid Layout for Albums and EPs */
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Music Controls */
+        .music-controls {
+            margin: 40px 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .control-button, .buy-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .control-button:hover, .buy-button:hover {
+            background-color: #218838;
+        }
+
+        .track {
+            margin-bottom: 40px;
+        }
+
+        .track h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        #progressBar {
+            width: 100%;
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #progressBar::-webkit-slider-thumb {
+            width: 15px;
+            height: 15px;
+            background: #28a745;
+            border-radius: 50%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            text-align: center;
+            color: #333;
+        }
+
+        .time-display {
+            margin-top: 5px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <header class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="exclusive-music.html">Exclusive Music</a>
+            <a href="membership.html">Membership</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Music Type Buttons -->
+    <div class="music-type-buttons">
+        <button class="music-type-button" onclick="alert('Single Tracks selected!')">Single Tracks</button>
+        <button class="music-type-button" onclick="alert('Exclusive Tracks selected!')">Exclusive Tracks</button>
+        <button class="music-type-button" onclick="alert('Full Albums selected!')">Full Albums</button>
+    </div>
+
+    <!-- Exclusive Music Section -->
+    <section id="exclusive-music" class="music-page">
+        <!-- Single Tracks List -->
+        <div class="song-list">
+            <h3 class="category-title">Single Tracks</h3>
+            <div class="song-item" data-src="SingleTracks/Dav Risen - Pray Your Way Out.mp3" data-bandcamp="https://davrisen.bandcamp.com/track/pray-your-way-out">Dav Risen - Pray Your Way Out</div>
+            <div class="song-item" data-src="SingleTracks/Dav Risen, KG Sunset - Not By Might.mp3" data-bandcamp="https://davrisen.bandcamp.com/track/not-by-might">Dav Risen - Not By Might</div>
+            <div class="song-item" data-src="SingleTracks/Dav Risen, Nani - Be Exalted.mp3" data-bandcamp="https://davrisen.bandcamp.com/track/be-exalted">Dav Risen, Nani - Be Exalted</div>
+            <div class="song-item" data-src="SingleTracks/Dav Risen, Rythmic SA - JESO Ke Morena(Yebo Nkosi).mp3" data-bandcamp="https://davrisen.bandcamp.com/track/jeso-ke-morena-yebo-nkosi">Dav Risen, Rythmic SA - JESO Ke Morena</div>
+            <div class="song-item" data-src="SingleTracks/Dav Risen - Be Still.mp3" data-bandcamp="https://davrisen.bandcamp.com/track/be-still">Dav Risen - Be Still</div>
+        </div>
+
+        <!-- Exclusive Tracks List -->
+        <div class="song-list">
+            <h3 class="category-title">Exclusive Tracks</h3>
+            <div class="song-item" data-src="ExclusiveTracks/Dav Risen - Exclusive Track 1.mp3" data-bandcamp="https://davrisen.bandcamp.com/track/exclusive-track-1">Exclusive Track 1</div>
+            <div class="song-item" data-src="ExclusiveTracks/Dav Risen - Exclusive Track 2.mp3" data-bandcamp="https://davrisen.bandcamp.com/track/exclusive-track-2">Exclusive Track 2</div>
+        </div>
+
+        <!-- Full Albums List -->
+        <div class="song-list">
+            <h3 class="category-title">Full Albums & EPs</h3>
+            <p> Click on Album or Ep to purchase and for more detailed info:</p>
+            <div class="album-grid">
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/gospel-house-grooves-vol-1-album" target="_blank">Gospel House Grooves Vol 1</a>
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/gospel-house-grooves-vol-2-album" target="_blank">Gospel House Grooves Vol 2</a>
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/grace-mercy-ep" target="_blank">Grace & Mercy EP</a>
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/come2jesus-ep" target="_blank">Come2Jesus EP</a>
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/forgiven-ep" target="_blank">Forgiven EP</a>
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/god-got-this-ep" target="_blank">God Got This EP</a>
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/worship-in-me" target="_blank">Worship In Me</a>
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/instrumentals-dubs-mixes-part-1" target="_blank">Instrumentals, Dubs & Mixes Part 1</a>
+                <a class="song-item" href="https://davrisen.bandcamp.com/album/top5-instrumentals-dub-mixes-part-2" target="_blank">Top 5 Instrumentals, Dub & Mixes Part 2</a>
+            </div>
+        </div>
+
+        <div class="music-player">
+            <audio id="audio" src="" type="audio/mpeg"></audio>
+        </div>
+        <div class="music-controls">
+            <button class="control-button" id="playButton">Play</button>
+            <button class="control-button" id="pauseButton">Pause</button>
+        </div>
+        <div class="track">
+            <h3 id="currentTrack">Currently Playing: None</h3>
+            <input type="range" id="progressBar" value="0" step="1" min="0">
+            <div class="time-display">
+                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+            </div>
+            <button class="buy-button" id="buyButton">Buy</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+        <div class="contact-info">
+            <p>&copy; 2024 Dav Risen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playButton = document.getElementById('playButton');
+        const pauseButton = document.getElementById('pauseButton');
+        const currentTrack = document.getElementById('currentTrack');
+        const buyButton = document.getElementById('buyButton');
+        const progressBar = document.getElementById('progressBar');
+        const currentTimeDisplay = document.getElementById('currentTime');
+        const durationDisplay = document.getElementById('duration');
+
+        // Add click event to each song item
+        const songItems = document.querySelectorAll('.song-item');
+        songItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const src = item.getAttribute('data-src');
+                const bandcampUrl = item.getAttribute('data-bandcamp');
+                audio.src = src;
+                currentTrack.textContent = `Currently Playing: ${item.textContent}`;
+                audio.play();
+
+                // Set the buy button to open the Bandcamp link
+                buyButton.onclick = () => {
+                    window.open(bandcampUrl, '_blank');
+                };
+
+                // Update duration display when the track is loaded
+                audio.addEventListener('loadedmetadata', () => {
+                    durationDisplay.textContent = formatTime(audio.duration);
+                    progressBar.max = audio.duration;
+                });
+            });
+        });
+
+        // Update progress bar and time display as audio plays
+        audio.addEventListener('timeupdate', () => {
+            const progress = audio.currentTime;
+            progressBar.value = progress;
+            currentTimeDisplay.textContent = formatTime(progress);
+        });
+
+        // Seek functionality
+        progressBar.addEventListener('input', () => {
+            audio.currentTime = progressBar.value;
+        });
+
+        // Play and Pause buttons
+        playButton.addEventListener('click', () => {
+            audio.play();
+        });
+
+        pauseButton.addEventListener('click', () => {
+            audio.pause();
+        });
+
+        // Format time from seconds to MM:SS
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' + secs : secs}`;
+        }
+    </script>
+</body>
+</html>
